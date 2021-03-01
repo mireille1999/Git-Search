@@ -1,0 +1,29 @@
+<div class="container allrepos">
+    <div class="card" appHighlight *ngFor="let repository of repo" style="width: 22rem;" class="repo">
+      <div class="card-body" >
+        <h5 class="card-title"><span class="top">Repository:</span> &nbsp;{{repository.name}} </h5>
+        <div class="card-text">
+           
+          <div class="desc"><span class="top">Description:</span> &nbsp;{{repository.description}} 
+          </div>
+           
+          <div class="card-subtitle mb-2">
+              <span class="top">Language: </span> {{repository.language}}
+          </div>
+          <div class="card-subtitle mb-2"><span class="top">Created:&nbsp; <span id="created">{{repository.created_at | datePipe}}</span> &nbsp;  On:</span> &nbsp;{{repository.created_at | date}}
+          </div>
+        </div>
+        </div>
+        <div class="card-footer">
+          <div class="btn-group" role="group" aria-label="Third group">
+            <button >Watch: <span class="forks">{{repository.watchers_count}}</span></button>
+          </div>
+          <div class="btn-group" role="group" aria-label="Third group">
+            <button >Forks: <span class="forks">{{repository.forks}}</span></button>
+          </div>
+          <div class="btn-group" role="group" aria-label="Third group">
+            <button id="visit"><a href="{{repository.html_url}}" class="card-link">VIEW</a> </button> 
+          </div>
+        </div>
+    </div>
+  </div>

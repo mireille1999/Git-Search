@@ -1,0 +1,86 @@
+.container-fluid{
+    background-color: black;
+  }
+  img{
+    width: 100%;
+    border-radius: 8px;
+  }
+  .card{
+    background-color: white;
+    box-shadow: 3px 3px 5px black;
+    color: black;
+  
+  }
+  .repo{
+    background-color: white;
+    color: black;
+    margin-bottom: 2%;
+    border-radius: 4px; 
+    box-shadow: 3px 3px 5px black;
+  }
+  a, ul li{
+    text-decoration: none;
+  }
+  .content{
+    margin-top: 1.3%;
+    margin-bottom: 0.5%;
+  }
+  .user{
+    margin-top: 1%;
+  }
+  #imgcard{
+    margin-top: 1%;
+    margin-bottom: 3%;
+    border-radius: 8px;
+    margin-right: 5%;
+  }
+  p{
+    font-size: 18px;
+  }
+  .name{
+    font-size: 18px;
+    color:black
+  }
+  
+  .allrepos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .desc{
+    min-height: 95px;
+  }
+  .top{
+    font-weight: bold;
+  }
+  .btn-group{
+    margin-left: 10px;
+  }
+  #view a{
+    text-decoration: none;
+    color: black;
+  }
+  .repos h2{
+    font-size: 45px;
+    margin-bottom: 2%;
+    margin-top: 50px;
+    color: white;
+  }
+  
+  
+  
+  #profile{
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+  }
+  .forks{
+    font-size: 10px;
+  }
+  #created{
+    font-weight: 400;
+  }
+  footer{
+    font-weight: bold;
+    margin-top: 10px;
+  }

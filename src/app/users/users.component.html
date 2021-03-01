@@ -1,0 +1,83 @@
+
+<div class="container-fluid">
+    <ng-progress></ng-progress>
+  <div>
+      <app-search-form (searchOutput)= "searchs($event)"></app-search-form>
+      <div class="container content">
+        <div class="row">
+          <div class="col-sm-3" id="imgcard">
+            <div class="userimage">
+              <div class="card-img-top">
+                <img src="{{user.avatar_url}}" alt="">
+              </div> 
+              
+            </div>
+            </div>
+          <div class="col-sm-6 user">
+            <div class="card" appHighlight>
+              <div class="card-body">
+                <h4>UserName: {{user.login}}</h4>
+                 
+                <p><i class="fa fa-file-o" style="font-size:18px"></i>&nbsp;&nbsp; Repositories:&nbsp;&nbsp; <span class="follow">{{user.public_repos}}</span></p>
+                 
+                <p> <i class="fa fa-user" style="font-size:18px"></i>&nbsp;&nbsp; Following:&nbsp;&nbsp;{{user.following}}</p>
+                 
+                <p> <i class="fa fa-users"style="font-size:18px"></i>&nbsp;&nbsp; Followers:&nbsp;&nbsp;{{user.followers}}</p>
+                 
+                <p><i class="fa fa-clock-o" style="font-size:18px"></i>&nbsp;&nbsp; Joined:&nbsp;&nbsp;{{user.created_at | datePipe}}</p>
+                 
+                <p><i class="fa fa-github" style="font-size:20px"></i>&nbsp;&nbsp;<a href="{{user.html_url}}" target="blank">Go to Github</a></p>
+                
+              </div>
+            </div>  
+          </div>
+        </div> 
+      </div>
+      <div>
+      </div>
+      
+      <div class="text-center repos">
+          <h2>Repos </h2>
+      </div>
+      <div class="container allrepos">
+        <div class="card" appHighlight *ngFor="let repository of repo" style="width: 44rem;" class="repo">
+          <div class="card-body" >
+            <h5 class="card-title"><span class="top">Repository:</span> &nbsp;{{repository.name}} </h5>
+            <div class="card-text">
+              <div class="desc"><span class="top">Description:</span> &nbsp;{{repository.description}} 
+              </div>
+               
+              <div class="card-subtitle mb-2">
+                  <span class="top">Language: </span> {{repository.language}}
+              </div>
+              <div class="card-subtitle mb-2">
+                <span class="top">Created:</span>&nbsp; {{repository.created_at | datePipe}} &nbsp;{{repository.created_at | date}}
+              </div>
+              <div class="card-subtitle mb-2">
+                <span class="top">Watch: </span> {{repository.watchers_count}}
+            </div>
+            <div class="card-subtitle mb-2">
+              <span class="top">Fork: </span> {{repository.watchers_count}}
+            </div>
+            <div class="card-subtitle mb-2">
+              <button id="view"><a href="{{repository.html_url}}" target="blank">VIEW</a> </button>            </div>
+            </div>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
+<footer class="text-center">
+  copyright @ Mireille Muhawenimana 2021
+  <ul>
+    <li>
+      <a><i class="fa fa-github" style="font-size:20px"></i></a>
+    </li>
+    <li>
+      <a><i class="fa fa-twitter" style="font-size:20px"></i></a>
+    </li>
+    <li>
+      <a><i class="fa fa-instagram" style="font-size:20px"></i></a>
+    </li>
+  </ul>
+</footer>
