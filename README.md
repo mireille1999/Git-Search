@@ -15,7 +15,7 @@ This web page is going to display github usernames and their repositories.
 ## Technologies Used
 * HTML  
 * CSS
-* Javascript
+* 
 * Typescript
 * Angular CLI
 
