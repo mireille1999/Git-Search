@@ -16,7 +16,7 @@ This web page is going to display github usernames and their repositories.
 * HTML  
 * CSS
 * Javascript
-*
+* Typescript
 * Angular CLI
 
 
