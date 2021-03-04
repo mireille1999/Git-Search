@@ -1,7 +1,7 @@
 # GitHub Search project
 #### Simple web app that searches github usernames and their repositories.
 ## Author
-
+Mireille Muhawenimana
 
 ## Description
 This web page is going to display github usernames and their repositories.
